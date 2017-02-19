@@ -1,0 +1,25 @@
+div(align="center")
+	form(method="POST", action="http://127.0.0.1:3001/api/client")
+		h3 Ingrese una reserva:
+		p Nombre
+			input(type="text", name="name", style="padding:5px;margin-left:10px;")
+		p Correo
+			input(type="email", name="email" style="padding:5px;margin-left:18px;")
+		p Celular
+			input(type="text", name="celphone" style="padding:5px;margin-left:18px;")
+		p Nº Personas
+			input(type="number", name="amount_ppl" style="padding:5px;margin-left:18px;")
+		p Fecha llegada
+			input(type="date", name="date_ini"  style="padding:3px;margin-left:25px;")
+		p Fecha salida
+			input(type="date", name="date_fin"  style="padding:3px;margin-left:25px;")
+		p Cobro diario
+			input(type="number", name="amount_per_day" style="padding:5px;margin-left:18px;")
+		p Monto cancelado
+			input(type="number", name="amount_canceled" style="padding:5px;margin-left:18px;")
+		p Estado de reserva
+			input(type="text", name="state" style="padding:5px;margin-left:18px;")
+		p Tipo de pieza
+			input(type="text", name="room_type" style="padding:5px;margin-left:18px;")
+		p
+			input(type="submit", value="Registrar" style="padding:1px;")
