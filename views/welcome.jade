@@ -1,8 +1,35 @@
-div(align="center")
-	h2 Hostal Saez
-	a(href="https://hostalsaez.herokuapp.com/register_reservation") 
-		h3 Generar reserva
-	a(href="https://hostalsaez.herokuapp.com/check_date") 
-		h3 Consultar por fecha de reserva
-	a(href="https://hostalsaez.herokuapp.com/check_reservations") 
-		h3 Consultar reservas
+doctype html
+html(lang="es")
+	head
+		title= "Hostal Saez"
+		link(type="text/css", rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css", integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ", crossorigin="anonymous")
+
+	body
+		div(class="container" align="center")
+			br
+			h3 Hostal Saez
+			hr(class="intro-divider")
+			div(class="row")
+				div(class="col-1")
+				div(class="col-3")
+					a(href="https://hostalsaez.herokuapp.com/register_reservation", class="btn btn-default btn-lg",  style="background-color:#F2F2F2")		
+						span(class="network-name", style="font-color:black;")
+							font(style="color:black;font-family:Courier New")="Generar reserva"
+							
+				div(class="col-4")
+					a(href="https://hostalsaez.herokuapp.com/check_date", class="btn btn-default btn-lg",  style="background-color:#F2F2F2;")
+						span(class="network-name")
+							font(style="color:black;font-family:Courier New")="Consultar reserva"
+							
+				div(class="col-3")
+					a(href="https://hostalsaez.herokuapp.com/check_reservations", class="btn btn-default btn-lg",  style="background-color:#F2F2F2;")
+						span(class="network-name")
+							font(style="color:black;font-family:Courier New")="Ver reservas"
+				div(class="col-1")				
+		
+
+
+								
+
+
+

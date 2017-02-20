@@ -1,25 +1,59 @@
-div(align="center")
-	form(method="POST", action="https://hostalsaez.herokuapp.com/api/client")
-		h3 Ingrese una reserva:
-		p Nombre
-			input(type="text", name="name", style="padding:5px;margin-left:10px;")
-		p Correo
-			input(type="email", name="email" style="padding:5px;margin-left:18px;")
-		p Celular
-			input(type="text", name="celphone" style="padding:5px;margin-left:18px;")
-		p Nº Personas
-			input(type="number", name="amount_ppl" style="padding:5px;margin-left:18px;")
-		p Fecha llegada
-			input(type="date", name="date_ini"  style="padding:3px;margin-left:25px;")
-		p Fecha salida
-			input(type="date", name="date_fin"  style="padding:3px;margin-left:25px;")
-		p Cobro diario
-			input(type="number", name="amount_per_day" style="padding:5px;margin-left:18px;")
-		p Monto cancelado
-			input(type="number", name="amount_canceled" style="padding:5px;margin-left:18px;")
-		p Estado de reserva
-			input(type="text", name="state" style="padding:5px;margin-left:18px;")
-		p Tipo de pieza
-			input(type="text", name="room_type" style="padding:5px;margin-left:18px;")
-		p
-			input(type="submit", value="Registrar" style="padding:1px;")
+doctype html
+html(lang="es")
+	head
+		title= "Hostal Saez"
+		link(type="text/css", rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css", integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ", crossorigin="anonymous")
+
+	body
+
+		div(class="container" style="width:40%;")
+
+			form(method="POST", action="https://hostalsaez.herokuapp.com/api/client")
+				br
+				div(class="form-group row")
+					label(for="example-text-input" class="col-3 col-form-label")="Nombre"
+					div(class="col-9")
+						input(type="text", class="form-control", placeholder="Ingresar nombre" name="name")
+				div(class="form-group row")
+					label(for="example-text-input" class="col-3 col-form-label")="Email"
+					div(class="col-9")
+						input(type="email", class="form-control", placeholder="Ingresar correo electronico" name="email")
+				div(class="form-group row")
+					label(for="example-text-input" class="col-3 col-form-label")="Celular"
+					div(class="col-9")
+						input(type="tel", class="form-control", placeholder="Ingresar numero de contacto" name="celphone")
+				div(class="form-group row")
+					label(for="example-text-input" class="col-4 col-form-label")="Nº Personas"
+					div(class="col-8")
+						input(type="number", class="form-control", placeholder="Ingresar cantidad de personas" name="amount_ppl")		
+				div(class="form-group row")
+					label(for="example-text-input" class="col-4 col-form-label")="Fecha de llegada"
+					div(class="col-8")
+						input(type="date", class="form-control", placeholder="Ingresar fecha de llegada" name="date_ini")
+				div(class="form-group row")
+					label(for="example-text-input" class="col-4 col-form-label")="Fecha de salida"
+					div(class="col-8")
+						input(type="date", class="form-control", placeholder="Ingresar fecha de salida" name="date_fin")
+				div(class="form-group row")
+					label(for="example-text-input" class="col-5 col-form-label")="Cobro diario(CLP)"
+					div(class="col-7")
+						input(type="number", class="form-control", placeholder="Ingresar el cobro por noche" name="amount_per_day", value=28000)
+				div(class="form-group row")
+					label(for="example-text-input" class="col-5 col-form-label")="Monto cancelado(CLP)"
+					div(class="col-7")
+						input(type="number", class="form-control", placeholder="Ingresar el monto cancelado" name="amount_canceled")
+				div(class="form-group row")
+					label(for="exampleSelect1" class="col-4 col-form-label")="Estado reserva"
+					select(name="state" class="col-7")
+						option="Confirmado"
+						option="Pendiente"
+				div(class="form-group row")
+					label(for="exampleSelect1" class="col-4 col-form-label")="Tipo de pieza"
+					select(name="room_type" class="col-7")
+						option="Matrimonial con baño compartido"
+						option="Matrimonial con baño privado"
+						option="Pieza doble"
+				p
+					button(type="submit", class="btn btn-primary", align="center")="Registrar"
+
+

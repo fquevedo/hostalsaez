@@ -1,16 +1,59 @@
-div(align="center")
-	p #{name}
-	p #{email}
-	p #{celphone}
-	p #{amount_ppl}
-	p #{date_ini}
-	p #{date_fin}
-	p #{amount_per_day}
-	p #{amount_canceled}
-	p #{state}
-	p #{room_type}
+doctype html
+html(lang="es")
+	head
+		title= "Hostal Saez"
+		link(type="text/css", rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css", integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ", crossorigin="anonymous")
 
-	p Reserva guardada correctamente
+	body
+		
+		div(class="container" align="center")
+			h4 Resumen de la reserva registrada
+				div(class="form-group row")
+					strong
+						label="Nombre:  "
+					p #{name}
+				div(class="form-group row")
+					strong
+						label="Email:  "
+					p #{email}
+				div(class="form-group row")
+					strong
+						label="Celular:  "
+					p #{celphone}
+				div(class="form-group row")
+					strong
+						label="Nº Personas:  "
+					p #{amount_ppl}
+				div(class="form-group row")
+					strong
+						label="Fecha llegada:  "
+					p #{date_ini}
+				div(class="form-group row")
+					strong
+						label="Fecha salida:  "
+					p #{date_fin}
+				div(class="form-group row")
+					strong
+						label="Cobro diario:  "
+					p #{amount_per_day}
+				div(class="form-group row")
+					strong
+						label="Monto cancelado:  "
+					p #{amount_canceled}
+				div(class="form-group row")
+					strong
+						label="Estado:  "
+					p #{state}
+				div(class="form-group row")
+					strong
+						label="Tipo de pieza:  "
+					p #{room_type}
 
-	a(href="https://hostalsaez.herokuapp.com/") 
-		h3 Volver al inicio
+
+					
+				a(href="https://hostalsaez.herokuapp.com") 
+					h3 Volver al inicio
+		div(class="navbar navbar-inverse bg-inverse")
+
+
+	

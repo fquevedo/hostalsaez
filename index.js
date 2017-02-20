@@ -8,6 +8,7 @@ const Client = require('./models/clients')
 
 
 const app = express()
+//const url = "https://hostalsaez.herokuapp.com"
 app.set('port',process.env.PORT || 3001)
 app.set('view engine', 'jade')
 //mongoose.connect('mongodb://localhost:27017/test')
@@ -52,13 +53,10 @@ app.get('/register_reservation', (req,res) =>{
 
 app.get('/', (req,res) =>{
 	res.render('welcome')
-
 })
 
 app.post('/api/client', (req,res)=>{
 	//let user = new User({email: req.body.email,nombre: req.body.nombre})
-
-
 
 	let client = new Client()
 
@@ -72,9 +70,6 @@ app.post('/api/client', (req,res)=>{
 	client.amount_canceled = req.body.amount_canceled
 	client.state = req.body.state
 	client.room_type = req.body.room_type
-
-	
-
 
 	client.save((err, clientStored) => {
 		if (err) res.status(500).send({message: `Error al salvar en la base de datos: ${err} `})
@@ -97,39 +92,10 @@ app.post('/api/client', (req,res)=>{
 		
 })
 
-app.post('/api/getclientid', (req,res)=>{
-	//let user = new User({email: req.body.email,nombre: req.body.nombre})
 
-
-	let client = new Client()
-	client.name = req.body.name
-	client.email = req.body.email
-
-	
-	Client.findOne({email: req.body.email, name: req.body.name}, function(err, client) {
-  		if (err) return res.status(500).send({message:`Error al realizar la peticion $(err)`})
-		if (!client) return res.status(404).send({message: `no existen coincidencias con ese nombre y email`})
-
-			res.status(200).send(client._id)
-	})
-		
-})
-
-
-
-/*
-
-app.put('/api/client/:productId', (req,res) =>{
-
-})
-
-app.delete('api/client/:productId', (req,res) =>{
-
-})
-*/
 //'mongodb://127.0.0.1:27017/clients'
-mongoose.connect('mongodb://fquevedo:Hostal1@ds145289.mlab.com:45289/hostal')
+mongoose.connect('mongodb://fquevedo:Reservas1@ds157539.mlab.com:57539/reservas')
 
 app.listen(app.get('port'), ()=>{
-	console.log('API REST corriendo en http://127.0.0.1:'+app.get('port'))
+	console.log('API REST corriendo en el puerto '+app.get('port'))
 })
