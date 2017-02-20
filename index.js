@@ -105,7 +105,8 @@ app.delete('api/client/:productId', (req,res) =>{
 
 })
 */
-mongoose.connect('mongodb://127.0.0.1:27017/clients')
+//'mongodb://127.0.0.1:27017/clients'
+mongoose.connect('mongodb://fquevedo:Hostal1@ds145289.mlab.com:45289/hostal')
 
 app.listen(app.get('port'), ()=>{
 	console.log('API REST corriendo en http://127.0.0.1:'+app.get('port'))
