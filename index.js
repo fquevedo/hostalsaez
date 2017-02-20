@@ -58,10 +58,20 @@ app.get('/', (req,res) =>{
 app.post('/api/client', (req,res)=>{
 	//let user = new User({email: req.body.email,nombre: req.body.nombre})
 
+
+
 	let client = new Client()
 
 	client.name = req.body.name
 	client.email = req.body.email
+	client.celphone = req.body.celphone
+	client.amount_ppl = req.body.amount_ppl
+	client.date_ini = req.body.date_ini
+	client.date_fin = req.body.date_fin
+	client.amount_per_day = req.body.amount_per_day
+	client.amount_canceled = req.body.amount_canceled
+	client.state = req.body.state
+	client.room_type = req.body.room_type
 
 	
 
@@ -72,6 +82,14 @@ app.post('/api/client', (req,res)=>{
 		res.status(200).render('register_confirm', {
 			name: clientStored.name, 
 			email: clientStored.email,
+			celphone: clientStored.celphone,
+			amount_ppl: clientStored.amount_ppl,
+			date_ini: clientStored.date_ini,
+			date_fin: clientStored.date_fin,
+			amount_per_day: clientStored.amount_per_day,
+			amount_canceled: clientStored.amount_canceled,
+			state: clientStored.state,
+			room_type: clientStored.room_type
 
 		})
 
