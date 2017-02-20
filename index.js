@@ -81,14 +81,14 @@ app.post('/api/client', (req,res)=>{
 		///res.status(200).send({client: clientStored})
 		res.status(200).render('register_confirm', {
 			name: clientStored.name, 
-			email: clientStored.email
-			celphone: clientStored.celphone
-			amount_ppl: clientStored.amount_ppl
-			date_ini: clientStored.date_ini
-			date_fin: clientStored.date_fin
-			amount_per_day: clientStored.amount_per_day
-			amount_canceled: clientStored.amount_canceled
-			state: clientStored.state
+			email: clientStored.email,
+			celphone: clientStored.celphone,
+			amount_ppl: clientStored.amount_ppl,
+			date_ini: clientStored.date_ini,
+			date_fin: clientStored.date_fin,
+			amount_per_day: clientStored.amount_per_day,
+			amount_canceled: clientStored.amount_canceled,
+			state: clientStored.state,
 			room_type: clientStored.room_type
 
 		})
