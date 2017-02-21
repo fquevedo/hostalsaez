@@ -1,0 +1,14 @@
+doctype html
+html(lang="es")
+	head
+		title= "Hostal Saez"
+		link(type="text/css", rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css", integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ", crossorigin="anonymous")
+		script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
+		script(type='text/javascript' src="/assets/js/ajax.js")
+	body
+		div(class="container" style="width:50%")
+			div(class="form-group row")
+				label(for="example-text-input" class="col-3 col-form-label")="Nombre"
+				div(class="col-9")
+					input#search(type="search", class="form-control", name="search")
+			h2#results

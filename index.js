@@ -3,32 +3,22 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
+const path = require('path')
 
 const Client = require('./models/clients')
 
 
 const app = express()
+
+app.use(express.static(__dirname + '/static'));
 //const url = "https://hostalsaez.herokuapp.com"
 app.set('port',process.env.PORT || 3001)
 app.set('view engine', 'jade')
-//mongoose.connect('mongodb://localhost:27017/test')
-/*
-
-String, Number, Date, Buffer, Boolean, Mixed, Objectid, Array
-*/
-
 
 app.use(bodyParser.urlencoded({ extended: false}))
 app.use(bodyParser.json())
 
-app.get('/check_reservations',(req,res) =>{
-	Client.find({}, (err, clients) => {
-		if (err) return res.status(500).send({message: `Error al realizar la petición ${err}`})
-		if (!clients) return res.status(404).sned({message: `No existen productos`})
-		res.status(200).send({message: clients})
-	})
 
-})
 
 app.get('/api/client/:clientId', (req,res) =>{
 	let clientId = req.params.clientId
@@ -43,17 +33,36 @@ app.get('/api/client/:clientId', (req,res) =>{
 	})
 })
 
-
-app.get('/register_reservation', (req,res) =>{
-	res.render('register')
-	
-	const date_today = Date.now()
-	console.log(date_today)
-})
-
 app.get('/', (req,res) =>{
 	res.render('welcome')
 })
+
+app.get('/register_reservation', (req,res) =>{
+	res.render('register')
+})
+
+app.get('/check_reservation', (req,res) =>{
+	res.render('check_reservation')
+})
+
+app.get('/check_reservations',(req,res) =>{
+	Client.find({}, (err, clients) => {
+		if (err) return res.status(500).send({message: `Error al realizar la petición ${err}`})
+		if (!clients) return res.status(404).sned({message: `No existen productos`})
+		res.status(200).send({message: clients})
+	})
+
+})
+app.get('/searching', function(req, res){
+
+ // input value from search
+ var val = req.query.search;
+ console.log(val);
+
+// testing the route
+// res.send("WHEEE");
+
+});
 
 app.post('/api/client', (req,res)=>{
 	//let user = new User({email: req.body.email,nombre: req.body.nombre})
