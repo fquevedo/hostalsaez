@@ -4,18 +4,53 @@ color:black;
 font-family:Courier New;
 }
 
-div.fq_inferior, img {
+.fq_inferior, img {
 
-	background: url(http://127.0.0.1:3001/assets/images/valdi.jpg) 100% 35% no-repeat;
+	background: url(https://www.rutaschile.com/configurador/Foto_Destinos/Grande_19112015073440.jpg) 100% 50% no-repeat;
 	background-size:100%;
 	position:absolute; /*El div será ubicado con relación a la pantalla*/
 	left:0px; /*A la derecha deje un espacio de 0px*/
 	right:0px; /*A la izquierda deje un espacio de 0px*/
 	bottom:0px; /*Abajo deje un espacio de 0px*/
-	height:180px; /*alto del div*/
+	height:200px; /*alto del div*/
 	z-index:0;
-    -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,1)))
- 
+	-webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,1)))
+    
 }
 
+#fq_a {
+	background-color:#F2F2F2;
+}
+#fq_font_w {
+	color:black;
+	font-family:Courier New;
+}
+
+#fq_copy_left {
+	margin: 0px;
+	display: inline-block;
+	text-align: right;
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	filter: FlipH;
+	-ms-filter: "FlipH";
+	position:absolute; 
+	right:123px; 
+	bottom:16px; 
+	font-size:10px;
+}
+
+#fq_tagline {
+	position:absolute; 
+	right:21px; 
+	bottom:0px;
+	font-size:10px;
+
+}
+#fq_table {
+	font-size:11px;
+	white-space: nowrap;
+}
 </style>

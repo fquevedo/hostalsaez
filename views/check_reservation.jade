@@ -3,20 +3,21 @@ html(lang="es")
 	head
 		title= "Hostal Saez"
 		link(type="text/css", rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css", integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ", crossorigin="anonymous")
-		script(src="https://code.jquery.com/jquery-1.10.2.js")
+		link(type="text/css",rel='stylesheet', href='/assets/css/my_css.css')
 		script(src='/socket.io/socket.io.js')
-		script(src='main.js')
+		script(src='client.js')
 	body
-		div(class="container", style="width:60%;")
+		div.container(style="width:60%;")
 			br
 			div(class="form-group row")
-				label(for="example-text-input",class="col-4 col-form-label")="Buscar por fecha de reserva"
-				div(class="col-6")
-					input#search(type="date", class="form-control", value="2017-02-23")
+				div(class="col-4 col-form-label")
+					label Buscar por fecha de reserva
+				div.col-6
+					input#search.form-control(type="date", value="2017-02-23", size="9")
 				div(class="col-2")
-					button(type="submit", class="btn btn-primary", onclick='return addMessage()') Buscar
-		div(class="container" style="width:80%")
-			table#pageviews(class="table")
+					button(type="submit", class="btn btn-primary", onclick='return addMessage();') Buscar
+		div.container(style="width:90%")
+			table#fq_table.table
 
 			
 				
