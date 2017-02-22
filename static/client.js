@@ -1,5 +1,5 @@
 'use strict'
-var socket = io.connect('http://127.0.0.1:3001',{'forceNew': true})
+var socket = io.connect('https://hostalsaez.herokuapp.com',{'forceNew': true})
 
 socket.on('messages',(data) => {
 	console.log(data)
