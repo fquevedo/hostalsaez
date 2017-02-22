@@ -7,15 +7,15 @@ html(lang="es")
 		script(src='/socket.io/socket.io.js')
 		script(src='client.js')
 	body
-		div.container(style="width:60%;")
+		div.container(style="width:50%;")
 			br
 			div(class="form-group row")
-				div(class="col-4 col-form-label")
+				div.col-1
+				div(class="col-5 col-form-label")
 					label Buscar por fecha de reserva
-				div.col-6
-					input#search.form-control(type="date", value="2017-02-23", size="9")
-				div(class="col-2")
-					button(type="submit", class="btn btn-primary", onclick='return addMessage();') Buscar
+				div.col-5
+					input#search.form-control(type="date", size="9", onchange='return addMessage();')
+				div.col-1
 		div.container(style="width:90%")
 			table#fq_table.table
 

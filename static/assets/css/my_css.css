@@ -1,11 +1,20 @@
 <style type="text/css">
-p.fq_letra {
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	font-size:10px;
+}
+
+
+#fq_letra {
 color:black;
-font-family:Courier New;
+font-family:Montserrat, "Helvetica Neue", sans-serif;
+text-rendering: optimizeLegibility;
+
 }
 
 .fq_inferior, img {
-
 	background: url(https://www.rutaschile.com/configurador/Foto_Destinos/Grande_19112015073440.jpg) 100% 50% no-repeat;
 	background-size:100%;
 	position:absolute; /*El div será ubicado con relación a la pantalla*/
@@ -15,7 +24,6 @@ font-family:Courier New;
 	height:200px; /*alto del div*/
 	z-index:0;
 	-webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,1)))
-    
 }
 
 #fq_a {
@@ -24,6 +32,7 @@ font-family:Courier New;
 #fq_font_w {
 	color:black;
 	font-family:Courier New;
+	font-size:18px;
 }
 
 #fq_copy_left {
@@ -52,5 +61,7 @@ font-family:Courier New;
 #fq_table {
 	font-size:11px;
 	white-space: nowrap;
+	left:20px;
+	right:20px;
 }
 </style>
