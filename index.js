@@ -11,12 +11,40 @@ const Client = require('./models/clients')
 const app = express()
 
 app.use(express.static(__dirname + '/static'));
+app.set('view engine', 'jade')
 //const url = "https://hostalsaez.herokuapp.com"
 app.set('port',process.env.PORT || 3001)
-app.set('view engine', 'jade')
+
 
 app.use(bodyParser.urlencoded({ extended: false}))
 app.use(bodyParser.json())
+
+var server = require('http').Server(app)
+var io = require('socket.io')(server)
+
+
+//escucha un determinado mensaje que le llege de algun cliente
+io.on('connection', function(socket){
+	console.log('alguien se ha conectado con sockets')
+
+
+	socket.on('new-message', function(data){
+		//Client.findById(data.author, (err, client) => {
+			//io.sockets.emit('messages', client)
+		//})
+
+		Client.find({"date_ini" : data}, function (err, item) {
+			console.log(data)
+			io.sockets.emit('messages', item)
+		})
+
+		
+
+
+		//messages.push(data)
+		//io.sockets.emit('messages', messages)
+	})
+})
 
 
 
@@ -68,7 +96,8 @@ app.post('/api/client', (req,res)=>{
 	//let user = new User({email: req.body.email,nombre: req.body.nombre})
 
 	let client = new Client()
-
+	var tmp = req.body.date_ini
+	console.log(tmp)
 	client.name = req.body.name
 	client.email = req.body.email
 	client.celphone = req.body.celphone
@@ -105,6 +134,6 @@ app.post('/api/client', (req,res)=>{
 //'mongodb://127.0.0.1:27017/clients'
 mongoose.connect('mongodb://fquevedo:Reservas1@ds157539.mlab.com:57539/reservas')
 
-app.listen(app.get('port'), ()=>{
+server.listen(app.get('port'), ()=>{
 	console.log('API REST corriendo en el puerto '+app.get('port'))
 })

@@ -3,12 +3,25 @@ html(lang="es")
 	head
 		title= "Hostal Saez"
 		link(type="text/css", rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css", integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ", crossorigin="anonymous")
-		script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js")
-		script(type='text/javascript' src="/assets/js/ajax.js")
+		script(src="https://code.jquery.com/jquery-1.10.2.js")
+		script(src='/socket.io/socket.io.js')
+		script(src='main.js')
 	body
-		div(class="container" style="width:50%")
+		div(class="container", style="width:60%;")
+			br
 			div(class="form-group row")
-				label(for="example-text-input" class="col-3 col-form-label")="Nombre"
-				div(class="col-9")
-					input#search(type="search", class="form-control", name="search")
-			h2#results
+				label(for="example-text-input",class="col-4 col-form-label")="Buscar por fecha de reserva"
+				div(class="col-6")
+					input#search(type="date", class="form-control", value="2017-02-23")
+				div(class="col-2")
+					button(type="submit", class="btn btn-primary", onclick='return addMessage()') Buscar
+		div(class="container" style="width:80%")
+			table#pageviews(class="table")
+
+			
+				
+			
+
+
+
+				
