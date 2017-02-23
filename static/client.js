@@ -21,7 +21,6 @@ function render(data){
 			'</td>'+'</td><td>'+data[i].amount_per_day+'</td>'+'</td><td>'+data[i].amount_canceled+'</td>'+'</td><td>'
 			+data[i].room_type+'</td>'+'</td><td>'+data[i].state+'</td>'+'</tr>'
 		}
-
 	}
 	else {
 		var input_date = format_date(document.getElementById('search').value);
