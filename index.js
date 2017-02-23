@@ -26,8 +26,6 @@ app.use(bodyParser.json())
 const server = require('http').Server(app)
 const io = require('socket.io')(server)
 
-
-
 //listen for a cliente message 
 io.on('connection', (socket) => {
 	console.log("nueva coneixon")
