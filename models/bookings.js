@@ -3,7 +3,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const ClientsSchema = Schema({
+const BookingsSchema = Schema({
 	name: String,
 	email: String,
 	celphone: String,
@@ -20,4 +20,4 @@ const ClientsSchema = Schema({
 String, Number, Date, Buffer, Boolean, Mixed, Objectid, Array
 */
 
-module.exports = mongoose.model('Client', ClientsSchema)
+module.exports = mongoose.model('Booking', BookingsSchema)

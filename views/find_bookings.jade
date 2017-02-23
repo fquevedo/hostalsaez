@@ -6,16 +6,14 @@ html(lang="es")
 		link(type="text/css",rel='stylesheet', href='/assets/css/my_css.css')
 		script(src='/socket.io/socket.io.js')
 		script(src='client.js')
-	body
+	body(onload="return addMessage()")
 		div.container(style="width:50%;")
-			br
-			div(class="form-group row")
-				div.col-1
-				div(class="col-5 col-form-label")
-					label Buscar por fecha de reserva
-				div.col-5
-					input#search.form-control(type="date", size="9", onchange='return addMessage();')
-				div.col-1
+			
+			div#fq_inline
+				label Buscar reservas por fecha de ingreso
+			div#fq_inline
+				input#search.form-control(type="date", size="9", onchange='return addMessage()', value="2017-02-22")
+
 		div.container(style="width:90%")
 			table#fq_table.table
 

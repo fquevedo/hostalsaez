@@ -26,14 +26,34 @@ text-rendering: optimizeLegibility;
 	-webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,1)))
 }
 
+#fq_box{
+    
+    display:inline;
+    
+}
+
 #fq_a {
 	background-color:#F2F2F2;
+	display: inline-block;
+	margin:15px;
+	width:240px;
+	-webkit-box-shadow: 0 3px 3px -3px black;
+    -moz-box-shadow: 0 3px 3px -3px black;
+    box-shadow: 0 3px 3px -3px black;
+
 }
+
+#fq_inline {
+	display: inline-block;
+	margin:15px;
+}
+
 #fq_font_w {
 	color:black;
 	font-family:Courier New;
 	font-size:18px;
 }
+  
 
 #fq_copy_left {
 	margin: 0px;
