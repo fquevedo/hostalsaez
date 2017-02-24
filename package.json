@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fquevedo/hostalsaez.git"
+  },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "./node_modules/jshint/bin/jshint server.js"
   },
   "author": "Fernando Quevedo",
   "license": "ISC",
@@ -17,5 +22,8 @@
     "nodemon": "^1.11.0",
     "path": "^0.12.7",
     "socket.io": "^1.7.3"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.4"
   }
 }
