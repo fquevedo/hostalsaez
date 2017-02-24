@@ -17,9 +17,9 @@ function render(data){
 		for (var i=0;i<data.length;++i){
 			var date_i = format_date(data[i].date_ini);
 			var date_f = format_date(data[i].date_fin);
-			table.innerHTML+='<tr><td>'+date_i+'</td><td>'+date_f+'</td><td>'+data[i].name+'</td>'+'</td><td>'+data[i].email+'</td>'+'</td><td>'+data[i].celphone+'</td>'+'</td><td>'+data[i].amount_ppl+'</td>'+'</td><td>'+data[i].amount_per_day+'</td>'+'</td><td>'+data[i].amount_canceled+'</td>'+'</td><td>'+data[i].room_type+'</td>'+'</td><td>'+data[i].state+'</td>'+'</tr>';
-		};
-	};
+			table.innerHTML+='<tr><td>'+date_i+'</td><td>'+date_f+'</td><td>'+data[i].name+'</td>'+'</td><td>'+data[i].email+'</td>'+'</td><td>'+data[i].celphone+'</td>'+'</td><td>'+data[i].amount_ppl+'</td>'+'</td><td>'+data[i].amount_per_day+'</td>'+'</td><td>'+data[i].amount_canceled+'</td>'+'</td><td>'+data[i].room_type+'</td>'+'</td><td>'+data[i].state+'</td></tr>';
+		}
+	}
 	else {
 		var input_date = format_date(document.getElementById('search').value);
 		//ECMAScript 6
