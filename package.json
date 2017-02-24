@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "test": "./node_modules/jshint/bin/jshint server.js"
+    "test": "./node_modules/jshint/bin/jshint static/client.js"
   },
   "author": "Fernando Quevedo",
   "license": "ISC",
