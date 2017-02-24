@@ -1,6 +1,4 @@
 { 
 "esversion":6,
-"browser" : true,
-"io": true
-
+"browser" : true
  }

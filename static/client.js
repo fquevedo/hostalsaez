@@ -1,4 +1,5 @@
 /*jslint node: true */
+/* global io: true */
 "use strict";
 
 var socket = io.connect('',{'forceNew': true});
