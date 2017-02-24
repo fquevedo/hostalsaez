@@ -61,7 +61,7 @@ app.post('/save_booking', (req,res)=>{
 	//create new object for save in mongodb
 	var booking = new Booking();
 	booking.name = req.body.name;
-	booking.email = req.body.email
+	booking.email = req.body.email;
 	booking.celphone = req.body.celphone;
 	booking.amount_ppl = req.body.amount_ppl;
 	booking.date_ini = req.body.date_ini;
