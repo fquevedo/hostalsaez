@@ -2,7 +2,7 @@
 
 Hostal Saez its a first version of a web page developed for a small hostel business 
 
-Built under a server-side architecture that renders the view in jade and css for styles, sockets for realtime communication between client and server.
+Built under a server-side architecture that renders the view using jade and css for styles, sockets for realtime communication between client and server.
 
 ## Getting Started
 
