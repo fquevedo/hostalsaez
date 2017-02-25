@@ -10,7 +10,7 @@ const Booking = require('./models/bookings');
 
 const app = express();
 
-const url = 'http://127.0.0.1:3001';
+const url = 'http://hostalsaez.herokuapp.com';
 const mongodb = 'mongodb://testuser:Test123@ds157819.mlab.com:57819/testing';
 
 
