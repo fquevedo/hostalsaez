@@ -1,7 +1,9 @@
-[![Coverage Status](https://travis-ci.org/fquevedo/hostalsaez.svg?branch=master)](https://travis-ci.org/fquevedo/hostalsaez.svg?branch=master)
+[![Coverage Status](https://travis-ci.org/fquevedo/hostalsaez.svg?branch=master)](https://travis-ci.org/fquevedo/hostalsaez)
 # Hostal Saez 
 
-Hostal Saez its the first version of a project web page developed for a small hostel business
+Hostal Saez its a first version of a web page developed for a small hostel business 
+
+Built under a server-side architecture that renders the view in jade and css for styles, sockets for realtime communication between client and server.
 
 ## Getting Started
 
@@ -73,10 +75,10 @@ For test in heroku use https://examplename.herokuapp.com
 * [Node.js](https://nodejs.org/es/) - JavaScript runtime built 
 * [Heroku](https://www.heroku.com/) -  Cloud plataform services
 * [GIT](https://git-scm.com/) -  Version control system
-* [PostCSS](http://postcss.org/) -  Tool for transforming CSS with JavaScript
+* [Gulp-PostCSS](http://postcss.org/) -  Tool for transforming CSS with JavaScript
 * [JSHint](https://github.com/jshint/jshint) 
 * [Travis CI](travis-ci.org) 
-
+* [Jade](travis-ci.org) 
 ## Authors
 
 * **Fernando J. Quevedo** - *Initial work* - [fquevedo](https://github.com/fquevedo)
