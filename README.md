@@ -34,7 +34,7 @@ $ npm install
 We will use `examplename` as app heroku name
 
 ```
-cd hostal saez
+cd hostalsaez
 heroku login
 heroku create examplename
 
