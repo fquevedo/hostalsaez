@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "test": "./node_modules/jshint/bin/jshint static/client.js"
+    "test": "./node_modules/jshint/bin/jshint static/client.js && ./node_modules/jshint/bin/jshint server.js"
   },
   "author": "Fernando Quevedo",
   "license": "ISC",
@@ -19,11 +19,17 @@
     "jade": "^1.11.0",
     "mongodb": "^2.2.22",
     "mongoose": "^4.8.2",
-    "nodemon": "^1.11.0",
     "path": "^0.12.7",
     "socket.io": "^1.7.3"
   },
   "devDependencies": {
-    "jshint": "^2.9.4"
+    "autoprefixer": "^6.7.5",
+    "csswring": "^5.1.1",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^6.3.0",
+    "gulp-rename": "^1.2.2",
+    "jshint": "^2.9.4",
+    "rucksack-css": "^0.9.1",
+    "nodemon": "^1.11.0"
   }
 }

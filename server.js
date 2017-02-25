@@ -10,12 +10,11 @@ const Booking = require('./models/bookings');
 
 const app = express();
 
+const url = 'http://127.0.0.1:3001';
+const mongodb = 'mongodb://testuser:Test123@ds157819.mlab.com:57819/testing';
 
 
-const url = 'https://hostalsaez.herokuapp.com';
-const mongodb = 'mongodb://fquevedo:Reservas1@ds157539.mlab.com:57539/reservas';
 app.set('port',process.env.PORT || 3001);
-
 
 app.use(express.static(__dirname + '/static'));
 app.set('view engine', 'jade');
@@ -29,15 +28,16 @@ const io = require('socket.io')(server);
 
 //listen for a cliente message 
 io.on('connection', (socket) => {
-	console.log("nueva coneixon");
+	//listen in new-message socket
 	socket.on('new-message', function(data){
 		Booking.find({"date_ini" : data}, function (err, item) {
+			//emit booking informtion to messages socket
 			io.sockets.emit('messages', item);
 		});
 	});
 });
 
-
+//handle get requiest  and render to jade pages
 app.get('/', (req,res) =>{
 	res.status(200).render('welcome', {url: url});
 });
@@ -50,14 +50,16 @@ app.get('/find_bookings', (req,res) =>{
 	res.status(200).render('find_bookings', {url: url});
 });
 
+// works like an api
 app.get('/all_bookings',(req,res) =>{
 	Booking.find({}, (err, booking) => {
 		if (err) return res.status(500).send({message: `Error al realizar la petición ${err}`});
 		if (!booking) return res.status(404).sned({message: `No existen productos`});
-		res.status(200).send({message: booking});
+		res.status(200).send(booking);
 	});
 });
 
+// post request that saves the booking information
 app.post('/save_booking', (req,res)=>{
 	//create new object for save in mongodb
 	var booking = new Booking();

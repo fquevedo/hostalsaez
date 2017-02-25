@@ -1,19 +1,15 @@
-<style type="text/css">
-html {
+html, body {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
-	font-size:10px;
+	font-size:14px;
 }
-
-
 #fq_letra {
 color:black;
 font-family:Montserrat, "Helvetica Neue", sans-serif;
 text-rendering: optimizeLegibility;
-
+font-size: responsive 3px 25px;
 }
-
 .fq_inferior, img {
 	background: url(https://www.rutaschile.com/configurador/Foto_Destinos/Grande_19112015073440.jpg) 100% 50% no-repeat;
 	background-size:100%;
@@ -25,36 +21,29 @@ text-rendering: optimizeLegibility;
 	z-index:0;
 	-webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,1)))
 }
-
-#fq_box{
-    
+#fq_box{ 
     display:inline;
-    
 }
-
 #fq_a {
 	background-color:#F2F2F2;
 	display: inline-block;
-	margin:15px;
-	width:240px;
+	
+	width:25%;
+	margin:20px;
 	-webkit-box-shadow: 0 3px 3px -3px black;
     -moz-box-shadow: 0 3px 3px -3px black;
     box-shadow: 0 3px 3px -3px black;
-
 }
-
 #fq_inline {
 	display: inline-block;
-	margin:15px;
+	font-size: responsive 3px 15px;
+	margin:10px;
 }
-
 #fq_font_w {
 	color:black;
 	font-family:Courier New;
-	font-size:18px;
+	font-size: responsive 3px 18px;
 }
-  
-
 #fq_copy_left {
 	margin: 0px;
 	display: inline-block;
@@ -67,21 +56,61 @@ text-rendering: optimizeLegibility;
 	-ms-filter: "FlipH";
 	position:absolute; 
 	right:123px; 
-	bottom:16px; 
+	bottom:13px; 
 	font-size:10px;
 }
-
 #fq_tagline {
+	font-size: 10px;
 	position:absolute; 
 	right:21px; 
-	bottom:0px;
-	font-size:10px;
-
+	bottom:0px;	
 }
 #fq_table {
-	font-size:11px;
-	white-space: nowrap;
-	left:20px;
-	right:20px;
+	font-size: responsive 3px 12px;
+	margin:0;	
 }
-</style>
+#div_table{
+	width:90%; 
+	height: 90%; 
+	overflow:auto;
+}
+#fq_divform {
+	width:33%;
+	font-size: responsive 3px 15px;
+	position:absolute 0 0 0 33%;
+	text-align: left;
+}
+#fq_divdisplay{
+	width:40%;
+	font-size: responsive 3px 15px;
+	position:absolute 5% 0 0 30%;
+	text-align: left;
+}
+#button_form {
+	font-size: responsive 3px 15px;
+	float:right;
+}
+#resp_text{
+	font-size: responsive 3px 15px;
+}
+#inlinebox{
+  display: inline-block;
+  margin: 5px;
+  font-size: responsive 3px 16px;
+}
+#blockbox{
+  display: block;
+  margin: 5px;
+}
+#htext{
+	font-size: responsive 3px 26px;
+}
+#search{
+	font-size: responsive 3px 15px;
+}
+
+h6{
+	font-size: responsive 3px 15px;
+}
+
+

@@ -1,2 +1,4 @@
 node_modules
 .DS_Store
+/static/gulpfile.js
+/static/css/my_css.css

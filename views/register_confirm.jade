@@ -3,57 +3,52 @@ html(lang="es")
 	head
 		title= "Hostal Saez"
 		link(type="text/css", rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css", integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ", crossorigin="anonymous")
+		link(type="text/css",rel='stylesheet', href='/assets/css/nanostyle.css')
 
 	body
 		
-		div(class="container" align="center")
-			h4 Resumen de la reserva registrada
-				div(class="form-group row")
-					strong
-						label="Nombre:  "
-					p #{name}
-				div(class="form-group row")
-					strong
-						label="Email:  "
-					p #{email}
-				div(class="form-group row")
-					strong
-						label="Celular:  "
-					p #{celphone}
-				div(class="form-group row")
-					strong
-						label="Nº Personas:  "
-					p #{amount_ppl}
-				div(class="form-group row")
-					strong
-						label="Fecha llegada:  "
-					p #{date_ini}
-				div(class="form-group row")
-					strong
-						label="Fecha salida:  "
-					p #{date_fin}
-				div(class="form-group row")
-					strong
-						label="Cobro diario:  "
-					p #{amount_per_day}
-				div(class="form-group row")
-					strong
-						label="Monto cancelado:  "
-					p #{amount_canceled}
-				div(class="form-group row")
-					strong
-						label="Estado:  "
-					p #{state}
-				div(class="form-group row")
-					strong
-						label="Tipo de pieza:  "
-					p #{room_type}
-
-
+		div#fq_divdisplay(align="center")
+			div#htext Resumen de la reserva 
+				div#blockbox
+					label#inlinebox Nombre:  
+					p#inlinebox #{name}
+				div#blockbox
+					label#inlinebox Email: 
+					p#inlinebox #{email}
+				div#blockbox
+					label#inlinebox Celular:  
+					p#inlinebox #{celphone}
+				div#blockbox
+					label#inlinebox Nº Personas:    
+					p#inlinebox #{amount_ppl}
+				div#blockbox
 					
+					label#inlinebox Fecha llegada:  
+					p#inlinebox #{date_ini}
+				div#blockbox
+					label#inlinebox Fecha salida:  
+					p#inlinebox #{date_fin}
+				div#blockbox
+					
+					label#inlinebox Cobro diario(CLP):   
+					p#inlinebox #{amount_per_day}
+				div#blockbox
+					
+					label#inlinebox Monto cancelado(CLP):  
+					p#inlinebox #{amount_canceled}
+				div#blockbox
+					
+					label#inlinebox Estado:  
+					p#inlinebox #{state}
+				div#blockbox
+					
+					label#inlinebox Tipo de pieza:  
+					p#inlinebox #{room_type}
+				br
+				br
 				a(href="#{url}") 
-					h3 Volver al inicio
-		div(class="navbar navbar-inverse bg-inverse")
+					button#button_form(type="button", class="btn btn-primary", align="right") Volver
+
 		
 
 
