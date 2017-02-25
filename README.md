@@ -1,5 +1,4 @@
-[![Coverage Status](https://travis-ci.org/fquevedo/hostalsaez.svg?branch=master)](https://travis-ci.org/fquevedo/hostalsaez)
-# Hostal Saez 
+# Hostal Saez [![Coverage Status](https://travis-ci.org/fquevedo/hostalsaez.svg?branch=master)](https://travis-ci.org/fquevedo/hostalsaez)
 
 Hostal Saez its a first version of a web page developed for a small hostel business 
 
