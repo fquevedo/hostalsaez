@@ -1,4 +1,5 @@
-# Hostal Saez https://travis-ci.org/fquevedo/hostalsaez.svg?branch=master
+[![Coverage Status](https://travis-ci.org/fquevedo/hostalsaez.svg?branch=master)](https://travis-ci.org/fquevedo/hostalsaez.svg?branch=master)
+# Hostal Saez 
 
 Hostal Saez its the first version of a project web page developed for a small hostel business
 
@@ -52,13 +53,13 @@ Setup `url` and `mongodb` variables in [`server.js`] file located in root folder
 For use heroku set app domain  as url value:
 
 ```
-url = 'https://examplename.herokuapp.com'
+const url = 'https://examplename.herokuapp.com'
 ```
 
 MLab mongodb database for test purpouses:
 
 ```
-mongodb = 'mongodb://testuser:Test123@ds157819.mlab.com:57819/testing'
+const mongodb = 'mongodb://testuser:Test123@ds157819.mlab.com:57819/testing'
 ```
 
 ## Running the tests
@@ -73,6 +74,8 @@ For test in heroku use https://examplename.herokuapp.com
 * [Heroku](https://www.heroku.com/) -  Cloud plataform services
 * [GIT](https://git-scm.com/) -  Version control system
 * [PostCSS](http://postcss.org/) -  Tool for transforming CSS with JavaScript
+* [JSHint](https://github.com/jshint/jshint) 
+* [Travis CI](travis-ci.org) 
 
 ## Authors
 
