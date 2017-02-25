@@ -56,6 +56,11 @@ For use heroku set app domain  as url value:
 ```
 const url = 'https://examplename.herokuapp.com'
 ```
+Local:
+
+```
+const url = 'http://127.0.0.1:3001'
+```
 
 MLab mongodb database for test purpouses:
 
