@@ -70,9 +70,14 @@ const mongodb = 'mongodb://testuser:Test123@ds157819.mlab.com:57819/testing'
 
 ## Running the tests
 
-For test in your local machine use [https://127.0.0.1:3001](https://127.0.0.1:3001).
+For test in your local machine use [https://127.0.0.1:3001](https://127.0.0.1:3001)
 
-For test in heroku use https://examplename.herokuapp.com
+Heroku use [https://examplename.herokuapp.com](https://examplename.herokuapp.com)
+
+## Test without install
+
+[https://hostalsaez.herokuapp.com](https://hostalsaez.herokuapp.com)
+
 
 ## Built With
 
@@ -80,9 +85,9 @@ For test in heroku use https://examplename.herokuapp.com
 * [Heroku](https://www.heroku.com/) -  Cloud plataform services
 * [GIT](https://git-scm.com/) -  Version control system
 * [Gulp-PostCSS](http://postcss.org/) -  Tool for transforming CSS with JavaScript
-* [JSHint](https://github.com/jshint/jshint) 
-* [Travis CI](travis-ci.org) 
-* [Jade](travis-ci.org) 
+* [JSHint](https://github.com/jshint/jshint) - Testing
+* [Travis CI](travis-ci.org) - Static Code Analysis Tool
+
 ## Authors
 
 * **Fernando J. Quevedo** - *Initial work* - [fquevedo](https://github.com/fquevedo)
