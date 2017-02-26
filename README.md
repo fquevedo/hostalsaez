@@ -2,7 +2,9 @@
 
 Hostal Saez its a first version of a web page developed for a small hostel business 
 
-Built under a server-side architecture that renders the view using jade and css for styles, sockets for realtime communication between client and server.
+Built focus on server side architecture that renders the view using jade and css for styles, sockets for realtime communication between client and server.
+
+Next features?: On the second version will implement angular.js for handle javascript of client side
 
 ## Getting Started
 
@@ -72,11 +74,7 @@ const mongodb = 'mongodb://testuser:Test123@ds157819.mlab.com:57819/testing'
 
 For test in your local machine use [https://127.0.0.1:3001](https://127.0.0.1:3001)
 
-Heroku use [https://examplename.herokuapp.com](https://examplename.herokuapp.com)
-
-## Test link
-
-[https://hostalsaez.herokuapp.com](https://hostalsaez.herokuapp.com)
+If use heroku [https://examplename.herokuapp.com](https://examplename.herokuapp.com) 
 
 
 ## Built With
