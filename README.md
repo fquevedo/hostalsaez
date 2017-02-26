@@ -74,7 +74,7 @@ For test in your local machine use [https://127.0.0.1:3001](https://127.0.0.1:30
 
 Heroku use [https://examplename.herokuapp.com](https://examplename.herokuapp.com)
 
-## Test without install
+## Test link
 
 [https://hostalsaez.herokuapp.com](https://hostalsaez.herokuapp.com)
 
