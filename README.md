@@ -85,8 +85,8 @@ Heroku use [https://examplename.herokuapp.com](https://examplename.herokuapp.com
 * [Heroku](https://www.heroku.com/) -  Cloud plataform services
 * [GIT](https://git-scm.com/) -  Version control system
 * [Gulp-PostCSS](http://postcss.org/) -  Tool for transforming CSS with JavaScript
-* [JSHint](https://github.com/jshint/jshint) - Testing
-* [Travis CI](travis-ci.org) - Static Code Analysis Tool
+* [JSHint](https://github.com/jshint/jshint) - Static Code Analysis Tool
+* [Travis CI](travis-ci.org) - Continuous integration service
 
 ## Authors
 
