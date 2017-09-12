@@ -4,8 +4,6 @@ Hostal Saez its a first version of a web page developed for a small hostel busin
 
 Built focus on development of server side architecture that renders the view using jade, css for styles and javascript. using sockets for realtime communication between the client and server.
 
-Next features?: On the second version will implement angular.js for handle javascript of client side
-
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. Also will give you an example of how to running the project on cloud services using heroku and mLab as database service. 
