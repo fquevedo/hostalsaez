@@ -2,8 +2,10 @@
 /* global io: true */
 "use strict";
 
-var socket = io.connect('127.0.0.1:3001');
-
+if (socket!=null)
+	alert('existe socket');
+else
+	alert('no existe socket');
 
 socket.on('messages',(data) => {
 	// render table with booking information
@@ -12,22 +14,14 @@ socket.on('messages',(data) => {
 
 socket.on('message_to_client',(data) => {
 	// render table with booking information
+	console.log(data);
 	$('.connected_users').append(data+"<br>");
 
 });
 
-socket.on('socketid',(data) => {
-	// render table with booking information
-	console.log(data);
-
-});
-
-
 
 function render(data){
-
 	var table = document.getElementById('fq_table');
-
 	if (data.length){
 		table.innerHTML='<tr><th>Ingreso</th><th>Salida</th><th>Nombre</th><th>Email</th><th>Telefono</th><th>Personas</th><th>Cobro</th><th>Cancelado</th><th>Tipo</th><th>Estado</th></tr>';
 		for (var i=0;i<data.length;++i){
@@ -38,24 +32,19 @@ function render(data){
 		}
 	}
 	else {
-
 		var input_date = format_date(document.getElementById('search').value);
 		//ECMAScript 6
 		table.innerHTML=`<br/><br/><h6 align=center>No se han encontrado reservas para la fecha ${input_date}</h6>`;
 	}
 }
-
 function addMessage(){
-
 	var msg = document.getElementById('search').value;
 	var date_time = new Date(msg).toISOString();
 	//emit input date to new-message socket
   	socket.emit('new-message', date_time);
 	return false;
 }
-
 function format_date(date){
-	
 	var input_date = new Date(date);
 	var dd =  input_date.getUTCDate();
 	var mm = input_date.getUTCMonth()+1;
@@ -65,7 +54,6 @@ function format_date(date){
 }
 //if month or day value is less than 10 then add 0 
 function leadingZero(number) {
-
   if (number < 10) {
     return "0" + number.toString();
   }

@@ -4,7 +4,10 @@ html(lang="es")
 		title= "Hostal Saez"
 		link(type="text/css", rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css", integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ", crossorigin="anonymous")
 		link(type="text/css",rel='stylesheet', href='/assets/css/nanostyle.css')
-	
+		script(src='/socket.io/socket.io.js')
+		script(src='client.js')
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+
 	body
 		div.container(align="center")
 			br
@@ -24,9 +27,13 @@ html(lang="es")
 				a#fq_a(href="#{url}/all_bookings", class="btn btn-default btn-lg")
 					span.network-name
 						font#fq_font_w Ver reservas
+			div.container
+				div.connected_users
+
 		div.fq_inferior
 				span#fq_copy_left © 
 				p#fq_tagline Fernando J. Quevedo
+
 			
 			
 			
