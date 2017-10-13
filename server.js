@@ -7,7 +7,6 @@ const mongoose = require('mongoose');
 const path = require('path');
 const Booking = require('./models/bookings');
 
-
 const app = express();
 
 const url = 'http://127.0.0.1:3001';
@@ -58,7 +57,6 @@ io.on('connection', (socket) => {
 //handle get requiest  and render to jade pages
 app.get('/', (req,res) =>{
 	res.status(200).render('welcome', {url: url});
-
 
 });
 
