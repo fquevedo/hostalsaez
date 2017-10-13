@@ -1,0 +1,27 @@
+doctype html
+html(lang="es")
+	head
+		title= "Hostal Saez"
+		link(type="text/css", rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css", integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ", crossorigin="anonymous")
+		link(type="text/css",rel='stylesheet', href='/assets/css/nanostyle.css')
+		script(src='/socket.io/socket.io.js')
+		script(src='client.js')
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+		
+	body(onload="return addMessage()")
+		div.container		
+			div#fq_inline
+				label Buscar reservas por fecha de ingreso
+			div#fq_inline
+				input#search.form-control(type="date", onchange='return addMessage()', value="2017-02-23")
+		div.container#div_table
+			table.table#fq_table
+		div.connectedusers
+
+			
+				
+			
+
+
+
+				
